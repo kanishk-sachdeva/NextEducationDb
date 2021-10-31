@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <title>Admin Upload Student Data</title>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><b>Next Education Database</b></a>
+        </div>
+    </nav>
+
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-{{ message.tags }} alert-dismissible fade show mb-0" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="card text-center">
+        <div class="card-header">
+            Enter your Student Credentials
+        </div>
+
+        <div class="card-body">
+
+
+            <form class="row g-3" method="POST" action="/secureupload" enctype="multipart/form-data">
+
+                <div class="col-12">
+                    <label for="adminid" class="form-label">Enter Admin id provided By Sachdeva Planet<span>*</span></label>
+                    <input type="number" class="form-control" id="adminid" required name="adminid" placeholder="xxxxxxxx..">
+                </div>
+
+                <div class="mb-3">
+                    <label for="studentphoto" class="form-label">Upload Student Photo<span>*</span></label>
+                    <input class="form-control" type="file" id="studentphoto" required name="studentphoto">
+                </div>
+                <div class="col-12">
+                    <label for="studentid" class="form-label">Student Roll Number<span>*</span></label>
+                    <input type="text" class="form-control" id="studentid" required name="studentid" placeholder="">
+                </div>
+                <div class="col-12">
+                    <label for="studentname" class="form-label">Student Name<span>*</span></label>
+                    <input type="text" class="form-control" id="studentname" required name="studentname" placeholder="">
+                </div>
+                <div class="col-md-6">
+                    <label for="studentfathername" class="form-label">Student Father Name<span>*</span></label>
+                    <input type="text" class="form-control" id="studentfathername" required name="studentfathername">
+                </div>
+                <div class="col-md-6">
+                    <label for="studentmothername" class="form-label">Student Mother Name<span>*</span></label>
+                    <input type="text" class="form-control" id="studentmothername" required name="studentmothername">
+                </div>
+
+                <div class="col-12">
+                    <label for="coursename" class="form-label">Course Name<span>*</span></label>
+                    <input type="text" class="form-control" id="coursename" required name="coursename"
+                        placeholder="Diploma in ABC..">
+                </div>
+                <div class="col-md-6">
+                    <label for="studentdob" class="form-label">Student Date of Birth (Password)<span>*</span></label>
+                    <input type="text" class="form-control" id="studentdob" required name="studentdob">
+                </div>
+                <div class="col-md-4">
+                    <label for="coursestartdate" class="form-label">Course Start Date<span>*</span></label>
+                    <input type="text" class="form-control" id="coursestartdate" required name="coursestartdate">
+                </div>
+                <div class="col-md-2">
+                    <label for="courseduration" class="form-label">Course Duration<span>*</span></label>
+                    <input type="number" class="form-control" id="courseduration" required name="courseduration">
+                </div>
+                <div class="col-12">
+                    <label for="obtainedmarks" class="form-label">Marks Obtained<span>*</span></label>
+                    <input type="text" class="form-control" id="obtainedmarks" required name="obtainedmarks"
+                        placeholder="xxx/600">
+                </div>
+
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <footer class="bg-light text-center text-lg-start">
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+          © 2021 Copyright:
+          <a class="text-dark" href="https://nexteducationfdk.com/">NextEducationfdk.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
