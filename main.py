@@ -33,6 +33,10 @@ bucket = storage.bucket("sachdevadb1.appspot.com")
 myclient = pymongo.MongoClient("mongodb+srv://kanu00047:Theindian%2337@cluster0.dizvk.mongodb.net")
 mydb = myclient["students"]["certificates"]
 
+@app.route('/')
+def home():
+    return redirect('/getuser')
+
 @app.route('/adminupload')
 def update_user():
     return render_template('adminupload.html')
