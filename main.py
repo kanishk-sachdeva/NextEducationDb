@@ -37,10 +37,6 @@ mydb = myclient["students"]["certificates"]
 def update_user():
     return render_template('adminupload.html')
 
-@app.route('/')
-def redirect1():
-    return redirect("/getuser" , code=200)
-
 @app.route('/secureupload', methods=['GET', 'POST'])
 def secure_upload():
     if request.method == 'POST':
