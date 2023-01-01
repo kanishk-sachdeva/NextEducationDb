@@ -39,7 +39,7 @@ def update_user():
 
 @app.route('/')
 def redirect1():
-    return redirect("https://nexteducationfdk.com/#certificate" , code=302)
+    return redirect("/getuser" , code=200)
 
 @app.route('/secureupload', methods=['GET', 'POST'])
 def secure_upload():
